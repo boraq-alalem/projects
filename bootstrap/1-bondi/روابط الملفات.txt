@@ -1,0 +1,16 @@
+
+
+رابط تحميل البوتستراب
+https://getbootstrap.com/docs/4.0/get...
+
+
+رابط تحميل ملف jquery
+https://jquery.com/download/
+
+
+رابط تحميل ملف popper.min.js
+https://cdnjs.cloudflare.com/ajax/lib...
+
+
+رابط الاكواد الجاهزة للبوتستراب
+https://getbootstrap.com/docs/4.5/g

@@ -1,3 +1,147 @@
-span{
-    color: white;
+@use "media/media.scss" as*;
+
+
+$dark-color: #19283f;
+$main-color: #33d1cc;
+$main-bg: #ff3150;
+$sectoin: #eff7fa;
+
+
+%main-btn {
+    color: rgb(255, 183, 0);
+    font-weight: 700;
+    padding: 8px 15px;
+    text-transform: capitalize;
 }
+
+
+.main-btn {
+    @extend %main-btn;
+    font-size: 0.95em;
+}
+
+%main-part {
+    span {
+        font-size: 0.9em !important;
+    }
+
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 120px;
+        background: rgba(0, 0, 0, 0.4);
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+}
+
+.main-part {
+    @extend %main-part;
+}
+
+body {
+    // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
+    height: 10000px;
+}
+
+.navbar {
+    background: $dark-color;
+    text-transform: capitalize;
+
+    .nav-link {
+        color: white;
+        font-weight: 700;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: $main-color;
+        }
+    }
+
+    .search {
+        border-left: 1px solid white;
+
+        svg {
+            color: $main-color;
+        }
+    }
+
+    .main-btn {
+        @extend %main-btn;
+    }
+
+    .navbar-toggler {
+        color: white;
+        border: white 2px solid;
+
+        &:focus,
+        &:hover {
+            box-shadow: none;
+            border-color: $main-color;
+            color: $main-color;
+        }
+    }
+}
+
+// start-landing
+.landing {
+    height: calc(100vh - 72px);
+    background: $dark-color;
+}
+
+// end-landing
+
+// start features
+
+.features {
+
+    .container-cards {
+        box-shadow: 0 0 8px 0;
+        border-radius: 10px;
+        padding: 15px 10px;
+        transition: 0.5s;
+
+        @include breakpoints('small') {
+            width: 75%;
+            margin: 10px;
+        }
+
+        @include breakpoints('medium') {
+            margin-bottom: 5px;
+        }
+
+        .feet-icon {
+            height: 200px;
+
+            .number {
+                font-size: 12rem;
+                color: $sectoin;
+            }
+
+            .icon {
+                font-size: 5rem;
+                color: $main-color;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.15);
+            z-index: 10;
+            background: white;
+            cursor: pointer;
+            box-shadow: 2px 3px 8px 3px #ccbebe,
+                -2px -3px 8px 3px #ccbebe;
+                @include breakpoints('small') {
+                    transform: scale(1.1);
+                }
+        }
+    }
+}
+
+// end features

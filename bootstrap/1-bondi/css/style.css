@@ -1,3 +1,112 @@
-span {
+.navbar .main-btn, .main-btn {
+  color: rgb(255, 183, 0);
+  font-weight: 700;
+  padding: 8px 15px;
+  text-transform: capitalize;
+}
+
+.main-btn {
+  font-size: 0.95em;
+}
+
+.main-part {
+  position: relative;
+}
+.main-part span {
+  font-size: 0.9em !important;
+}
+.main-part::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 120px;
+  background: rgba(0, 0, 0, 0.4);
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body {
+  font-family: sans-serif;
+  height: 10000px;
+}
+
+.navbar {
+  background: #19283f;
+  text-transform: capitalize;
+}
+.navbar .nav-link {
   color: white;
+  font-weight: 700;
+}
+.navbar .nav-link:hover, .navbar .nav-link:focus, .navbar .nav-link.active {
+  color: #33d1cc;
+}
+.navbar .search {
+  border-left: 1px solid white;
+}
+.navbar .search svg {
+  color: #33d1cc;
+}
+.navbar .navbar-toggler {
+  color: white;
+  border: white 2px solid;
+}
+.navbar .navbar-toggler:focus, .navbar .navbar-toggler:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #33d1cc;
+  color: #33d1cc;
+}
+
+.landing {
+  height: calc(100vh - 72px);
+  background: #19283f;
+}
+
+.features .container-cards {
+  -webkit-box-shadow: 0 0 8px 0;
+          box-shadow: 0 0 8px 0;
+  border-radius: 10px;
+  padding: 15px 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (max-width:767px) {
+  .features .container-cards {
+    width: 75%;
+    margin: 10px;
+  }
+}
+@media (min-width:768px) and (max-width:991px) {
+  .features .container-cards {
+    margin-bottom: 5px;
+  }
+}
+.features .container-cards .feet-icon {
+  height: 200px;
+}
+.features .container-cards .feet-icon .number {
+  font-size: 12rem;
+  color: #eff7fa;
+}
+.features .container-cards .feet-icon .icon {
+  font-size: 5rem;
+  color: #33d1cc;
+}
+.features .container-cards:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  z-index: 10;
+  background: white;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 3px 8px 3px #ccbebe, -2px -3px 8px 3px #ccbebe;
+          box-shadow: 2px 3px 8px 3px #ccbebe, -2px -3px 8px 3px #ccbebe;
+}
+@media (max-width:767px) {
+  .features .container-cards:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
