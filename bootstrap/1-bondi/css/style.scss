@@ -12,6 +12,7 @@ $sectoin: #eff7fa;
     font-weight: 700;
     padding: 8px 15px;
     text-transform: capitalize;
+    transition: 0.4s;
 }
 
 
@@ -133,15 +134,69 @@ body {
         &:hover {
             transform: scale(1.15);
             z-index: 10;
-            background: white;
+            background: #eee;
             cursor: pointer;
             box-shadow: 2px 3px 8px 3px #ccbebe,
                 -2px -3px 8px 3px #ccbebe;
-                @include breakpoints('small') {
-                    transform: scale(1.1);
-                }
+
+            @include breakpoints('small') {
+                transform: scale(1.1);
+            }
         }
     }
 }
 
 // end features
+
+// start our-work
+.our-work {
+    background: $sectoin;
+
+    ul {
+        li {
+            @extend %main-btn;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &.active {
+                background: $main-bg;
+            }
+
+            &:not(.active) {
+                color: black;
+            }
+
+            &:not(.active):hover {
+                color: $main-color;
+            }
+        }
+    }
+
+    .box {
+        background: white;
+        padding: 5px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: attr(data-work);
+            position: absolute;
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            display: grid;
+            place-items: center;
+            font-size: 1.6rem;
+            text-transform: capitalize;
+            font-weight: bold;
+            background: #33d1ccb5;
+            transform: translateX(calc(-100% - 5px));
+            transition: 0.5s;
+        }
+
+        &:hover::before {
+            transform: translateX(0);
+        }
+    }
+}
+
+// end our-work
