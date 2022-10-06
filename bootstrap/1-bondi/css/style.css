@@ -31,7 +31,6 @@
 
 body {
   font-family: sans-serif;
-  height: 10000px;
 }
 
 .navbar {
@@ -91,7 +90,7 @@ body {
 }
 .features .container-cards .feet-icon .number {
   font-size: 12rem;
-  color: #eff7fa;
+  color: #e4f2f7;
 }
 .features .container-cards .feet-icon .icon {
   font-size: 5rem;
@@ -114,7 +113,7 @@ body {
 }
 
 .our-work {
-  background: #eff7fa;
+  background: #e4f2f7;
 }
 .our-work ul li {
   cursor: pointer;
@@ -156,4 +155,25 @@ body {
 .our-work .box:hover::before {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.stuff .description {
+  width: 500px;
+}
+
+.team {
+  background: #e4f2f7;
+}
+.team .info p {
+  font-size: 0.95em;
+  font-weight: 700;
+}
+.team .row .box h4 {
+  background: #33d1cc;
+}
+@media (min-width:768px) and (max-width:991px) {
+  .team .row .box h4, .team .row .box blockquote {
+    font-weight: 700;
+    padding: 1.2rem !important;
+  }
 }

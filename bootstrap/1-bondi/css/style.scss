@@ -4,7 +4,8 @@
 $dark-color: #19283f;
 $main-color: #33d1cc;
 $main-bg: #ff3150;
-$sectoin: #eff7fa;
+$sectoin: #e4f2f7;
+// $sectoin: #eff7fa;
 
 
 %main-btn {
@@ -47,7 +48,6 @@ $sectoin: #eff7fa;
 body {
     // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-family: sans-serif;
-    height: 10000px;
 }
 
 .navbar {
@@ -200,3 +200,44 @@ body {
 }
 
 // end our-work
+
+// start-stuff
+.stuff {
+
+    .description {
+        width: 500px;
+    }
+
+}
+
+// end-stuff
+
+// start-team
+.team {
+    background: $sectoin;
+
+    .info {
+        p {
+            font-size: 0.95em;
+            font-weight: 700;
+        }
+    }
+
+    .row {
+        .box {
+            h4 {
+                background: $main-color;
+            }
+
+            @include breakpoints('medium') {
+                h4,blockquote {
+                    font-weight: 700 ;
+                    padding: 1.2rem !important;
+                }
+
+            }
+        }
+    }
+}
+
+// end-team
