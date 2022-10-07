@@ -247,3 +247,28 @@ body {
     background: $dark-color;
 }
 // end-project
+
+// start-subscribe
+.subscribe{
+    .row{
+        .title{
+            letter-spacing: -1px;
+            font-size: 1.3em; 
+            text-transform: capitalize;  
+        }
+
+        input[type="text"]{
+            width: 100%;
+            border: none;
+            padding: 2px;
+            border-bottom: 1px solid white;
+            background: transparent;
+            color: white;
+            &::placeholder{
+                color: white;
+                text-transform: capitalize;
+            }
+        } 
+    }
+}
+// end-subscribe

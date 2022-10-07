@@ -181,3 +181,37 @@ body {
 .project {
   background: #19283f;
 }
+
+.subscribe .row .title {
+  letter-spacing: -1px;
+  font-size: 1.3em;
+  text-transform: capitalize;
+}
+.subscribe .row input[type=text] {
+  width: 100%;
+  border: none;
+  padding: 2px;
+  border-bottom: 1px solid white;
+  background: transparent;
+  color: white;
+}
+.subscribe .row input[type=text]::-webkit-input-placeholder {
+  color: white;
+  text-transform: capitalize;
+}
+.subscribe .row input[type=text]::-moz-placeholder {
+  color: white;
+  text-transform: capitalize;
+}
+.subscribe .row input[type=text]:-ms-input-placeholder {
+  color: white;
+  text-transform: capitalize;
+}
+.subscribe .row input[type=text]::-ms-input-placeholder {
+  color: white;
+  text-transform: capitalize;
+}
+.subscribe .row input[type=text]::placeholder {
+  color: white;
+  text-transform: capitalize;
+}
