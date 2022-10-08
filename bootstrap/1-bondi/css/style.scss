@@ -205,7 +205,7 @@ body {
 .stuff {
 
     .description {
-        width: 500px;
+        max-width: 500px;
     }
 
 }
@@ -230,8 +230,10 @@ body {
             }
 
             @include breakpoints('medium') {
-                h4,blockquote {
-                    font-weight: 700 ;
+
+                h4,
+                blockquote {
+                    font-weight: 700;
                     padding: 1.2rem !important;
                 }
 
@@ -243,32 +245,93 @@ body {
 // end-team
 
 // start-project
-.project{
+.project {
     background: $dark-color;
 }
+
 // end-project
 
 // start-subscribe
-.subscribe{
-    .row{
-        .title{
+.subscribe {
+    .row {
+        .title {
             letter-spacing: -1px;
-            font-size: 1.3em; 
-            text-transform: capitalize;  
+            font-size: 1.3em;
+            text-transform: capitalize;
         }
 
-        input[type="text"]{
+        input[type="text"] {
             width: 100%;
             border: none;
             padding: 2px;
             border-bottom: 1px solid white;
             background: transparent;
             color: white;
-            &::placeholder{
+
+            &::placeholder {
                 color: white;
                 text-transform: capitalize;
             }
-        } 
+            &:focus{
+                outline: none;
+            }
+        }
+
+        .btn-sub {
+            background: $dark-color;
+        }
     }
 }
+
 // end-subscribe
+
+// start-footer
+
+$social:(
+    facebook:#1877f2,
+    twitter: #1da1f2,
+    linkedin: #0077b5,
+    youtube:#ff0000
+);
+
+.footer{
+    background: $dark-color;
+    .info span{
+        color: $sectoin;
+        font-weight: bold;
+    }
+
+    .link-about li{
+        &:hover{
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .contact-us{
+        a{
+            text-transform: none;
+        }
+    }
+
+    .social{
+        li{
+            background: #000;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+        }
+        @each $name , $color in $social {
+            .#{$name}{
+                background: $color;
+            }
+        }
+    }
+}
+// end-footer

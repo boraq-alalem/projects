@@ -158,7 +158,7 @@ body {
 }
 
 .stuff .description {
-  width: 500px;
+  max-width: 500px;
 }
 
 .team {
@@ -172,7 +172,8 @@ body {
   background: #33d1cc;
 }
 @media (min-width:768px) and (max-width:991px) {
-  .team .row .box h4, .team .row .box blockquote {
+  .team .row .box h4,
+.team .row .box blockquote {
     font-weight: 700;
     padding: 1.2rem !important;
   }
@@ -214,4 +215,50 @@ body {
 .subscribe .row input[type=text]::placeholder {
   color: white;
   text-transform: capitalize;
+}
+.subscribe .row input[type=text]:focus {
+  outline: none;
+}
+.subscribe .row .btn-sub {
+  background: #19283f;
+}
+
+.footer {
+  background: #19283f;
+}
+.footer .info span {
+  color: #e4f2f7;
+  font-weight: bold;
+}
+.footer .link-about li:hover {
+  color: white;
+  cursor: pointer;
+}
+.footer .contact-us a {
+  text-transform: none;
+}
+.footer .social li {
+  background: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+.footer .social li svg {
+  width: 20px;
+  height: 20px;
+}
+.footer .social .facebook {
+  background: #1877f2;
+}
+.footer .social .twitter {
+  background: #1da1f2;
+}
+.footer .social .linkedin {
+  background: #0077b5;
+}
+.footer .social .youtube {
+  background: #ff0000;
 }
