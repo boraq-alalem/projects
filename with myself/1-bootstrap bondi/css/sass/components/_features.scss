@@ -1,0 +1,25 @@
+%sim-pro {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.features {
+    .holder-icon {
+        position: relative;
+        height: 200px;
+
+        .number {
+            font-size: 12rem;
+            @extend %sim-pro;
+            color: var(--section);
+        }
+
+        .icon {
+            font-size: 60px;
+            @extend %sim-pro;
+            color: var(--green);
+        }
+    }
+}

@@ -1,0 +1,56 @@
+:root {
+    --dark: #19283f;
+    --green: #33d1cc;
+    --section: #eff7fa;
+    --red: #ff3150;
+    --yellow: #ffc400;
+}
+
+* {
+    list-style-type: none;
+    text-decoration: none !important;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 1000px;
+}
+
+.main-btn {
+    padding: 0.5rem 0.8rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.main-part {
+    p {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 120px;
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+/*
+<a class="btn text-warning bg-danger main-btn rounded-pill" href="">get started</a>
+
+
+            <div class="main-part text-center">
+                <img src="imgs/title.png" alt="">
+                <h2 class="text-capitalize fw-bold mt-4">we are good at</h2>
+                <p class="text-uppercase text-black-50 lh-lg">some of these stuff under</p> 
+            </div>
+
+
+*/

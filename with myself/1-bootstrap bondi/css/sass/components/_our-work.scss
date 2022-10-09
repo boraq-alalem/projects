@@ -1,0 +1,50 @@
+.our-work{
+    background: var(--section);
+    ul{
+        li{
+            padding: 0.5rem 1.2rem;
+            font-weight: bold;
+            &.active{
+                border-radius: 50rem;
+                background: var(--red);
+                color: var(--yellow);
+            }
+            &:hover{
+                color: var(--red);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .row{
+        >{
+            div{
+                margin-bottom: 15px;
+                .box{
+                    padding: 5px;
+                    position: relative;
+                    overflow: hidden;
+                    &::before{
+                        transition: 0.5s;
+                        content: attr(data-app);
+                        position: absolute;
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-160%, -50%);
+                        color: white;
+                        background-color:rgba(51, 209, 204, 0.597);
+                        height: calc(100% - 10px);
+                        width: calc(100% - 10px);
+                        display: grid;
+                        place-items: center;
+                    }
+                    &:hover::before{
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@use '../media/media.scss' as *;
+
+.header {
+    background: var(--dark);
+    color: white;
+
+
+    ul {
+        .nav-link {
+            color: white;
+            text-transform: capitalize;
+            font-weight: bold;
+            transition: 0.5s;
+
+            &.active,
+            &:hover {
+                color: var(--green);
+
+                @include breakpoints(medium) {
+                    border-bottom: 1px solid var(--green);
+                    padding-left: 5px;
+                }
+
+                @include breakpoints(small) {
+                    border-bottom: 1px solid var(--green);
+                    padding-left: 5px;
+                }   
+            }
+        }
+    }
+
+    .navbar-toggler {
+        color: white;
+        border: 2px solid white;
+        outline: none;
+
+        &:focus {
+            outline: none;
+            border-color: var(--green);
+            color: var(--green);
+            box-shadow: none;
+        }
+    }
+
+    .search {
+        color: var(--green);
+    }
+
+
+}

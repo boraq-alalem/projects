@@ -1,0 +1,27 @@
+$small: "(max-width:767px)";
+$medium: "(min-width:768px) and(max-width:991px)";
+$large: "(min-width:992px) and(max-width:1199px)";
+$x-large: "(min-width:1200px)";
+
+@mixin breakpoints($break) {
+    @if $break == 'small' {
+        @media #{$small} {
+            @content;
+        }
+    }
+    @else if $break == 'medium'{
+        @media #{$medium} {
+            @content;
+        }  
+    }
+    @else if $break == 'large'{
+        @media #{$large} {
+            @content;
+        }  
+    }
+    @else if $break == 'x-large'{
+        @media #{$x-large} {
+            @content;
+        }  
+    }
+}

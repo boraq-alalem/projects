@@ -1,0 +1,173 @@
+:root {
+  --dark: #19283f;
+  --green: #33d1cc;
+  --section: #eff7fa;
+  --red: #ff3150;
+  --yellow: #ffc400;
+}
+
+* {
+  list-style-type: none;
+  text-decoration: none !important;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 1000px;
+}
+
+.main-btn {
+  padding: 0.5rem 0.8rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.main-part {
+  position: relative;
+}
+.main-part p {
+  font-size: 1em;
+  font-weight: bold;
+}
+.main-part::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 2px;
+  width: 120px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*
+<a class="btn text-warning bg-danger main-btn rounded-pill" href="">get started</a>
+
+
+            <div class="main-part text-center">
+                <img src="imgs/title.png" alt="">
+                <h2 class="text-capitalize fw-bold mt-4">we are good at</h2>
+                <p class="text-uppercase text-black-50 lh-lg">some of these stuff under</p> 
+            </div>
+
+
+*/
+.header {
+  background: var(--dark);
+  color: white;
+}
+.header ul .nav-link {
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header ul .nav-link.active, .header ul .nav-link:hover {
+  color: var(--green);
+}
+@media (min-width:768px) and (max-width:991px) {
+  .header ul .nav-link.active, .header ul .nav-link:hover {
+    border-bottom: 1px solid var(--green);
+    padding-left: 5px;
+  }
+}
+@media (max-width:767px) {
+  .header ul .nav-link.active, .header ul .nav-link:hover {
+    border-bottom: 1px solid var(--green);
+    padding-left: 5px;
+  }
+}
+.header .navbar-toggler {
+  color: white;
+  border: 2px solid white;
+  outline: none;
+}
+.header .navbar-toggler:focus {
+  outline: none;
+  border-color: var(--green);
+  color: var(--green);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.header .search {
+  color: var(--green);
+}
+
+.landing {
+  background: var(--dark);
+  height: calc(100vh - 70px);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.features .holder-icon .icon, .features .holder-icon .number {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.features .holder-icon {
+  position: relative;
+  height: 200px;
+}
+.features .holder-icon .number {
+  font-size: 12rem;
+  color: var(--section);
+}
+.features .holder-icon .icon {
+  font-size: 60px;
+  color: var(--green);
+}
+
+.our-work {
+  background: var(--section);
+}
+.our-work ul li {
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+}
+.our-work ul li.active {
+  border-radius: 50rem;
+  background: var(--red);
+  color: var(--yellow);
+}
+.our-work ul li:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+.our-work .row > div {
+  margin-bottom: 15px;
+}
+.our-work .row > div .box {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.our-work .row > div .box::before {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: attr(data-app);
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-160%, -50%);
+          transform: translate(-160%, -50%);
+  color: white;
+  background-color: rgba(51, 209, 204, 0.597);
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+.our-work .row > div .box:hover::before {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
